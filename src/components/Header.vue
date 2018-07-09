@@ -10,41 +10,48 @@
 
 <script>
 export default {
-  props: ['elements']
+  data () {
+    return {
+      elements: [
+        { title: 'Complete', name: 'appComplete' },
+        { title: 'Incomplete', name: 'appIncomplete' },
+      ]
+    }
+  }
 }
 </script>
 
 
 <style>
 
-#header {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  background: #4e123d;
-}
+  #header {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #4e123d;
+  }
 
-ul {
-  list-style: none;
-}
+  ul {
+    list-style: none;
+  }
 
-li {
-  display: inline;
-  padding: 20px 40px;
-}
+  li {
+    display: inline;
+    padding: 20px 40px;
+  }
 
-a {
-  text-decoration: none;
-  color: beige;
-  font-size: 30px;
-}
+  a {
+    text-decoration: none;
+    color: beige;
+    font-size: 30px;
+  }
 
-a:hover {
-  text-decoration: underline;
-}
+  a:hover {
+    text-decoration: underline;
+  }
 
 
 </style>

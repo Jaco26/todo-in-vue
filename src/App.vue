@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header :elements="elements" @showThis="showThis" />
+    <app-header @showThis="showThis" />
     <component :is="selectedComponent"></component>
   </div>
 </template>
@@ -19,17 +19,11 @@ export default {
   data () {
     return {
       selectedComponent: 'appIncomplete',
-      elements: [
-        { title: 'Complete', name: 'appComplete' },
-        { title: 'Incomplete', name: 'appIncomplete' },
-      ]
     }
   },
   methods: {
     showThis (name) {
       this.selectedComponent = name;
-      // this.elements.forEach(view => view.active = false);
-      // this.elements[index].active = true;
     }
   }
 }
